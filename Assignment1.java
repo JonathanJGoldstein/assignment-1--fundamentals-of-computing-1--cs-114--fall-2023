@@ -48,10 +48,12 @@ public class Assignment1 {
     randNum = randGen.nextInt(32, 16385);
     System.out.print("Random number generated. Continuing...\n");
 
+    //convert Celsius to string and round to the nearest tenth
+    var Celsius_Round = String.valueOf(Celsius).substring(0, 3);
 
     //Generate final string
-    finalString = finalString.concat(String.valueOf(Celsius).concat(invString.concat(String.valueOf(randNum))));
-    System.console().printf("Your new string is " + finalString);
+    finalString = finalString.concat(Celsius_Round.concat(invString.concat(String.valueOf(randNum))));
+    System.out.print("Your new string is " + finalString);
   }
 
 
