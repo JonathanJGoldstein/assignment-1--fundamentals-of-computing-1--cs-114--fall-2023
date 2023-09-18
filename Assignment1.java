@@ -49,7 +49,7 @@ public class Assignment1 {
     System.out.print("Random number generated. Continuing...\n");
 
     //convert Celsius to string and round to the nearest tenth
-    var Celsius_Round = String.valueOf(Celsius).substring(0, 3);
+    var Celsius_Round = String.valueOf(Celsius).substring(0, String.valueOf(Celsius).indexOf('.')+2);
 
     //Generate final string
     finalString = finalString.concat(Celsius_Round.concat(invString.concat(String.valueOf(randNum))));
