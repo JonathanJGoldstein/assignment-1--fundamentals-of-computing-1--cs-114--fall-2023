@@ -9,11 +9,16 @@ public class Assignment1 {
   public static void main(String[] args) {
     int randNum = 0;
     Random randGen = new Random();
-
+    var inString = "";
     var invString = "";
     var finalString = "";
-    
+
+    var Fahrenheit_String = "";
+    int Fahrenheit_Int = 0;
     float Celsius = 0;
+    var Celsius_Round = "";
+
+
 
 
     //print Block letters
@@ -23,16 +28,16 @@ public class Assignment1 {
     System.out.print("     JJJ      GGG      \n");
     System.out.print("JJ   JJJ       GGG      GGGGGGG\n");
     System.out.print("JJJ  JJJ        GGG      GGG\n");
-    System.out.print(" JJJJJJJ          GGGGGGGG\n");
+    System.out.print(" JJJJJJ           GGGGGGGG\n");
 
 
     //get user values
-    var inString = System.console().readLine("Please enter a 5-character string:\n");
-    var Fahrenheit_String = System.console().readLine("Please enter a number \033[0;31min \033[0mFahrenheit:\n");
-    
+    inString = System.console().readLine("Please enter a 5-character string:\n");
+    Fahrenheit_String = System.console().readLine("Please enter a number \033[0;31min \033[0mFahrenheit:\n");
+
     //get int version of Fahrenheit
-    int Fahrenheit_Int = SToInt(Fahrenheit_String);
-    
+    Fahrenheit_Int = SToInt(Fahrenheit_String);
+
     //convert Fahrenheit to Celsius
     Celsius = ((float)(Fahrenheit_Int - 32) * 5) / 9;
 
@@ -49,7 +54,7 @@ public class Assignment1 {
     System.out.print("Random number generated. Continuing...\n");
 
     //convert Celsius to string and round to the nearest tenth
-    var Celsius_Round = String.valueOf(Celsius).substring(0, String.valueOf(Celsius).indexOf('.')+2);
+    Celsius_Round = String.valueOf(Celsius).substring(0, String.valueOf(Celsius).indexOf('.')+2);
 
     //Generate final string
     finalString = finalString.concat(Celsius_Round.concat(invString.concat(String.valueOf(randNum))));
